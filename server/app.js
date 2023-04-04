@@ -12,6 +12,8 @@ const auctionRouter = require("./routes/auctionRoute");
 
 const app = express();
 
+app.use(express.json());
+
 app.use("/api/users", userRouter);
 app.use("/api/nfts", nftRouter);
 app.use("/api/blogs", blogRouter);
@@ -20,7 +22,7 @@ app.use("/api/auctions", auctionRouter);
 mongoose
   .connect(mongo_uri)
   .then(() => {
-    console.log("connect to database");
+    console.log("connected to database");
     app.listen(port, () => {
       console.log(`Server is Listening on ${port}`);
     });

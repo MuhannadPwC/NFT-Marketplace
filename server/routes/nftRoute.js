@@ -9,8 +9,11 @@ const {
 const nftRouter = express.Router();
 
 nftRouter.get("/", getAllNFT);
-nftRouter.get("/:id", getNFTById);
-nftRouter.post("/", postNFT);
+
 nftRouter.get("/collections", getCollections);
+
+nftRouter.get("/:id", getNFTById);
+
+nftRouter.post("/", postNFT);
 
 module.exports = nftRouter;

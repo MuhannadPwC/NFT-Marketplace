@@ -44,7 +44,7 @@ const nftSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-    collection: {
+    _collection: {
       type: Schema.Types.ObjectId,
       ref: "Collection",
     },
@@ -52,4 +52,4 @@ const nftSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("NFT", nftSchema);
+module.exports = mongoose.model('NFT', nftSchema);

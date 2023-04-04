@@ -10,9 +10,13 @@ const {
 const auctionRouter = express.Router();
 
 auctionRouter.get("/", getAllAuctions);
+
 auctionRouter.get("/:id", getAuctionById);
+
 auctionRouter.post("/", postAuction);
+
 auctionRouter.post("/:id/bid", postBid);
+
 auctionRouter.get("/:id/bid", getHighestBid);
 
 module.exports = auctionRouter;

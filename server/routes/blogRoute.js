@@ -9,8 +9,11 @@ const {
 const blogRouter = express.Router();
 
 blogRouter.get("/", getAllBlogs);
+
 blogRouter.get("/:id", getBlogById);
+
 blogRouter.post("/", postBlog);
+
 blogRouter.post("/:id/comment", postComment);
 
 module.exports = blogRouter;
