@@ -1,28 +1,48 @@
+const { validationResult } = require("express-validator");
 const User = require("../models/User");
 
-// Sign up the user
-const postSignUp = async (req, res) => {};
+// POST Sign up the user
+const postSignUp = async (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    let errorMessage = "";
+    errorMessage = errorMessage.concat(
+      errors.array().map((err) => {
+        return " " + err.msg;
+      })
+    );
+    return next(new Error(errorMessage));
+  }
 
-// Sign in the user
-const postSignIn = async (req, res) => {};
+  return res.status(201).json({ temp: "OK!" })
+};
 
-// Get user details by their ID
-const getUserById = async (req, res) => {};
+// POST Sign in the user
+const postSignIn = async (req, res, next) => {};
 
-// Get a specific user's orders
-const getUserOrders = async (req, res) => {};
+// GET user details by their ID
+const getUserById = async (req, res, next) => {};
 
-// Get the NFTs the user liked
-const getUserLikes = async (req, res) => {};
+// GET a specific user's orders
+const getUserOrders = async (req, res, next) => {};
 
-// Get the users that follow the user
-const getUserFollowers = async (req, res) => {};
+// GET the NFTs the user liked
+const getUserLikes = async (req, res, next) => {};
 
-// Get the users that the user follows
-const getUserFollowing = async (req, res) => {};
+// POST add NFT to user's liked list
+const postUserLikes = async (req, res, next) => {};
 
-// Get the NFTs the user Created
-const getUserCreated = async (req, res) => {};
+// PATCH remove NFT from user's liked list
+const patchUserLikes = async (req, res, next) => {};
+
+// GET the users that follow the user
+const getUserFollowers = async (req, res, next) => {};
+
+// GET the users that the user follows
+const getUserFollowing = async (req, res, next) => {};
+
+// GET the NFTs the user Created
+const getUserCreated = async (req, res, next) => {};
 
 module.exports = {
   postSignUp,
@@ -30,6 +50,8 @@ module.exports = {
   getUserById,
   getUserOrders,
   getUserLikes,
+  postUserLikes,
+  patchUserLikes,
   getUserFollowers,
   getUserFollowing,
   getUserCreated,

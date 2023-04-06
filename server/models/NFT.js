@@ -14,6 +14,7 @@ const nftSchema = new Schema(
     },
     price: {
       type: Number,
+      required: true,
     },
     currency: {
       type: String,
@@ -26,6 +27,7 @@ const nftSchema = new Schema(
     },
     category: {
       type: String,
+      required: true,
     },
     likes: {
       type: Number,
@@ -45,8 +47,7 @@ const nftSchema = new Schema(
       ref: "User",
     },
     _collection: {
-      type: Schema.Types.ObjectId,
-      ref: "Collection",
+      type: String
     },
   },
   { timestamps: true }
