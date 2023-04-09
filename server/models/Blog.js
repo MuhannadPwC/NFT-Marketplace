@@ -11,6 +11,9 @@ const blogSchema = new Schema(
     tags: {
       type: [String],
     },
+    body: {
+      type: String
+    },
     author: {
       type: Schema.Types.ObjectId,
       ref: "User",

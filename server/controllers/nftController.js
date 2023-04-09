@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const NFT = require("../models/NFT");
+const Collection = require("../models/NFT-Collection");
 
 // Get all NFTs from the Database
 const getAllNFT = async (req, res, next) => {
@@ -55,8 +56,19 @@ const postNFT = async (req, res, next) => {
   }
 };
 
+const getCollections = async (req, res, next) => {
+  try {
+    const collections = await Collection.find();
+
+    return res.status(200).json({ collections });
+  } catch (error) {
+    return next(new Error("Could not obtain NFT collections"));
+  }
+};
+
 module.exports = {
   getAllNFT,
   getNFTById,
   postNFT,
+  getCollections,
 };

@@ -11,6 +11,8 @@ const {
   getUserCreated,
   postUserLikes,
   patchUserLikes,
+  postFollow,
+  patchUnFollow,
 } = require("../controllers/userController");
 
 const userRouter = express.Router();
@@ -40,14 +42,15 @@ userRouter.get("/:id", getUserById);
 userRouter.get("/:id/orders", getUserOrders);
 
 userRouter.get("/:id/likes", getUserLikes);
-
 userRouter.post("/:id/likes", postUserLikes);
-
 userRouter.patch("/:id/likes", patchUserLikes);
 
 userRouter.get("/:id/followers", getUserFollowers);
 
 userRouter.get("/:id/following", getUserFollowing);
+
+userRouter.post("/:id/follow", postFollow);
+userRouter.patch("/:id/follow", patchUnFollow);
 
 userRouter.get("/:id/created", getUserCreated);
 

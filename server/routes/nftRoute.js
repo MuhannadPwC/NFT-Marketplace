@@ -4,11 +4,14 @@ const {
   getAllNFT,
   getNFTById,
   postNFT,
+  getCollections,
 } = require("../controllers/nftController");
 
 const nftRouter = express.Router();
 
 nftRouter.get("/", getAllNFT);
+
+nftRouter.get("/collections", getCollections);
 
 nftRouter.get("/:id", getNFTById);
 
