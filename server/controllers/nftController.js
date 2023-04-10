@@ -46,8 +46,16 @@ const postNFT = async (req, res, next) => {
       name,
       picture,
       price,
-      description,
+      currency: "ETH",
+      type: "Auction",
+      status: "For Sale",
       category,
+      likes: 33,
+      description,
+      quantity: 2,
+      creator: "643289a2c3bdc4fb03379e89",
+      owner: "643289a2c3bdc4fb03379e89",
+      _collection: "BIG BOIs"
     });
 
     return res.status(201).json({ nft });
