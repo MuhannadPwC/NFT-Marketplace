@@ -1,18 +1,20 @@
 const Blog = require("../models/Blog");
+const HttpError = require("../models/HttpError");
 
 const getAllBlogs = async (req, res, next) => {
   try {
     const blogs = await Blog.find();
 
     if (blogs.length === 0) {
-      return next(new Error("No blogs found"));
+      return next(new HttpError("No blogs found", 404));
     }
 
     return res.status(200).json({ blogs });
   } catch (error) {
     return next(
-      new Error(
-        "Something went wrong while retrieving blogs, please try again."
+      new HttpError(
+        "Something went wrong while retrieving blogs, please try again.",
+        500
       )
     );
   }
@@ -25,14 +27,15 @@ const getBlogById = async (req, res, next) => {
     const blog = Blog.findById(id).populate(["comments", "author"]);
 
     if (!blog) {
-      return next(new Error("Could not obtain specified blog."));
+      return next(new HttpError("Could not obtain specified blog.", 404));
     }
 
     return res.status(200).json({ blog });
   } catch (error) {
     return next(
-      new Error(
-        "Something went wrong while retrieving blog, please try again."
+      new HttpError(
+        "Something went wrong while retrieving blog, please try again.",
+        500
       )
     );
   }

@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const User = require("../models/User");
+const HttpError = require("../models/HttpError");
 
 // POST Sign up the user
 const postSignUp = async (req, res, next) => {
@@ -11,12 +12,10 @@ const postSignUp = async (req, res, next) => {
         return " " + err.msg;
       })
     );
-    return next(new Error(errorMessage));
+    return next(new HttpError(errorMessage, 422));
   }
 
   const { firstname, lastname, username, email, password } = req.body;
-
-  
 
   return res.status(201).json({ temp: "OK!" });
 };
@@ -33,7 +32,7 @@ const getUserById = async (req, res, next) => {
 
     return res.status(200).json({ user });
   } catch (error) {
-    return next(new Error("Could not get user's details"));
+    return next(new HttpError("Could not get user's details", 404));
   }
 };
 
@@ -46,12 +45,12 @@ const getUserOrders = async (req, res, next) => {
     console.log(user);
 
     if (user.orders.length === 0) {
-      return next(new Error("user does not have any orders"));
+      return next(new HttpError("user does not have any orders.", 404));
     }
 
     return res.status(200).json({ orders: user.orders });
   } catch (error) {
-    return next(new Error("Could not obtain user's orders"));
+    return next(new HttpError("Could not obtain user's orders", 500));
   }
 };
 
@@ -64,12 +63,12 @@ const getUserLikes = async (req, res, next) => {
     console.log(user);
 
     if (user.likes.length === 0) {
-      return next(new Error("user does not have any likes"));
+      return next(new HttpError("user does not have any likes.", 404));
     }
 
     return res.status(200).json({ likes: user.likes });
   } catch (error) {
-    return next(new Error("Could not obtain user's likes"));
+    return next(new HttpError("Could not obtain user's likes", 500));
   }
 };
 
@@ -84,16 +83,18 @@ const getUserFollowers = async (req, res, next) => {
   const { id } = req.params;
 
   try {
-    const user = await User.findById(id).populate("followers").select("followers");
+    const user = await User.findById(id)
+      .populate("followers")
+      .select("followers");
     console.log(user);
 
     if (user.followers.length === 0) {
-      return next(new Error("user does not have any followers"));
+      return next(new HttpError("user does not have any followers", 404));
     }
 
     return res.status(200).json({ followers: user.followers });
   } catch (error) {
-    return next(new Error("Could not obtain user's followers"));
+    return next(new HttpError("Could not obtain user's followers", 500));
   }
 };
 
@@ -102,16 +103,18 @@ const getUserFollowing = async (req, res, next) => {
   const { id } = req.params;
 
   try {
-    const user = await User.findById(id).populate("following").select("following");
+    const user = await User.findById(id)
+      .populate("following")
+      .select("following");
     console.log(user);
 
     if (user.following.length === 0) {
-      return next(new Error("user does not have any following"));
+      return next(new HttpError("user does not have any following", 404));
     }
 
     return res.status(200).json({ following: user.following });
   } catch (error) {
-    return next(new Error("Could not obtain user's following"));
+    return next(new HttpError("Could not obtain user's following", 404));
   }
 };
 
@@ -130,12 +133,12 @@ const getUserCreated = async (req, res, next) => {
     console.log(user);
 
     if (user.created.length === 0) {
-      return next(new Error("user does not have any NFTs created"));
+      return next(new HttpError("user does not have any NFTs created", 404));
     }
 
     return res.status(200).json({ created: user.created });
   } catch (error) {
-    return next(new Error("Could not obtain user's created"));
+    return next(new HttpError("Could not obtain user's created", 500));
   }
 };
 
