@@ -12,7 +12,9 @@ const getAllNFT = async (req, res, next) => {
       return next(new HttpError("There were no NFTs found.", 404));
     }
 
-    return res.status(200).json({ nfts });
+    return res
+      .status(200)
+      .json({ nfts: nfts.map((nft) => nft.toObject({ getters: true })) });
   } catch (error) {
     return next(new HttpError("Could not obtain NFTs, please try again.", 500));
   }
@@ -25,7 +27,7 @@ const getNFTById = async (req, res, next) => {
   try {
     const nft = await NFT.findById(id);
 
-    return res.status(200).json({ nft });
+    return res.status(200).json({ nft: nft.toObject({ getters: true }) });
   } catch (err) {
     return next(new HttpError("Failed to find NFT.", 404));
   }
@@ -44,7 +46,7 @@ const postNFT = async (req, res, next) => {
     return next(new HttpError(errorMessage, 422));
   }
 
-  const { name, picture, price, description, category } = req.body;
+  const { name, picture, price, description, category, type, quantity } = req.body;
 
   try {
     const nft = await NFT.create({
@@ -52,14 +54,14 @@ const postNFT = async (req, res, next) => {
       picture,
       price,
       currency: "ETH",
-      type: "Auction",
+      type,
       status: "For Sale",
       category,
-      likes: 33,
+      likes: 0,
       description,
-      quantity: 2,
-      creator: "643289a2c3bdc4fb03379e89",
-      owner: "643289a2c3bdc4fb03379e89",
+      quantity: quantity || 0,
+      creator: "643289a2c3bdc4fb03379e89", // get from front end after authorization
+      owner: "643289a2c3bdc4fb03379e89",  // get from front end after authorization
       _collection: "BIG BOIs",
     });
 
@@ -73,7 +75,11 @@ const getCollections = async (req, res, next) => {
   try {
     const collections = await Collection.find();
 
-    return res.status(200).json({ collections });
+    return res.status(200).json({
+      collections: collections.map((collection) =>
+        collection.toObject({ getters: true })
+      ),
+    });
   } catch (error) {
     return next(new HttpError("Could not obtain NFT collections", 404));
   }

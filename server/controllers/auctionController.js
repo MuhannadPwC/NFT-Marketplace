@@ -10,7 +10,9 @@ const getAllAuctions = async (req, res, next) => {
       return next(new HttpError("No auctions were found.", 404));
     }
 
-    return res.status(200).json({ auctions });
+    return res.status(200).json({
+      auctions: auctions.map((auction) => auction.toObject({ getters: true })),
+    });
   } catch (error) {
     return next(
       new HttpError("Something went wrong while obtaining auctions", 500)
@@ -28,7 +30,9 @@ const getAuctionById = async (req, res, next) => {
       return next(new HttpError("Could not obtain specified auction", 404));
     }
 
-    return res.status(200).json({ auction });
+    return res
+      .status(200)
+      .json({ auction: auction.toObject({ getters: true }) });
   } catch (error) {
     return next(
       new HttpError("Something went wrong while obtaining auction", 500)
@@ -48,7 +52,7 @@ const getHighestBid = async (req, res, next) => {
       .sort({ amount: "desc" })
       .populate(["user", "nft"]);
 
-    return res.status(200).json({ highestBid });
+    return res.status(200).json({ highestBid: highestBid[0] });
   } catch (error) {
     return next(
       new HttpError("Something went wrong while getting highest bid.", 500)

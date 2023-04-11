@@ -30,7 +30,7 @@ const getUserById = async (req, res, next) => {
   try {
     const user = await User.findById(id);
 
-    return res.status(200).json({ user });
+    return res.status(200).json({ user: user.toObject({ getters: true }) });
   } catch (error) {
     return next(new HttpError("Could not get user's details", 404));
   }
@@ -48,7 +48,9 @@ const getUserOrders = async (req, res, next) => {
       return next(new HttpError("user does not have any orders.", 404));
     }
 
-    return res.status(200).json({ orders: user.orders });
+    return res.status(200).json({
+      orders: user.orders.map((order) => order.toObject({ getters: true })),
+    });
   } catch (error) {
     return next(new HttpError("Could not obtain user's orders", 500));
   }
@@ -66,16 +68,15 @@ const getUserLikes = async (req, res, next) => {
       return next(new HttpError("user does not have any likes.", 404));
     }
 
-    return res.status(200).json({ likes: user.likes });
+    return res.status(200).json({
+      likes: user.likes.map((like) => like.toObject({ getters: true })),
+    });
   } catch (error) {
     return next(new HttpError("Could not obtain user's likes", 500));
   }
 };
 
-// POST add NFT to user's liked list
-const postUserLikes = async (req, res, next) => {};
-
-// PATCH remove NFT from user's liked list
+// PATCH add or remove NFT from user's liked list
 const patchUserLikes = async (req, res, next) => {};
 
 // GET the users that follow the user
@@ -92,7 +93,11 @@ const getUserFollowers = async (req, res, next) => {
       return next(new HttpError("user does not have any followers", 404));
     }
 
-    return res.status(200).json({ followers: user.followers });
+    return res.status(200).json({
+      followers: user.followers.map((follower) =>
+        follower.toObject({ getters: true })
+      ),
+    });
   } catch (error) {
     return next(new HttpError("Could not obtain user's followers", 500));
   }
@@ -112,17 +117,18 @@ const getUserFollowing = async (req, res, next) => {
       return next(new HttpError("user does not have any following", 404));
     }
 
-    return res.status(200).json({ following: user.following });
+    return res.status(200).json({
+      following: user.following.map((follow) =>
+        follow.toObject({ getters: true })
+      ),
+    });
   } catch (error) {
     return next(new HttpError("Could not obtain user's following", 404));
   }
 };
 
-// POST add a user to user's following list
-const postFollow = async (req, res, next) => {};
-
-//PATCH remove a user from user's following list
-const patchUnFollow = async (req, res, next) => {};
+//PATCH add or remove a user from user's following list
+const patchFollow = async (req, res, next) => {};
 
 // GET the NFTs the user Created
 const getUserCreated = async (req, res, next) => {
@@ -136,7 +142,11 @@ const getUserCreated = async (req, res, next) => {
       return next(new HttpError("user does not have any NFTs created", 404));
     }
 
-    return res.status(200).json({ created: user.created });
+    return res
+      .status(200)
+      .json({
+        created: user.created.map((cr) => cr.toObject({ getters: true })),
+      });
   } catch (error) {
     return next(new HttpError("Could not obtain user's created", 500));
   }
@@ -148,11 +158,9 @@ module.exports = {
   getUserById,
   getUserOrders,
   getUserLikes,
-  postUserLikes,
   patchUserLikes,
   getUserFollowers,
   getUserFollowing,
-  postFollow,
-  patchUnFollow,
+  patchFollow,
   getUserCreated,
 };

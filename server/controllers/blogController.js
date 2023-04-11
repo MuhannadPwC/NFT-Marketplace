@@ -9,7 +9,9 @@ const getAllBlogs = async (req, res, next) => {
       return next(new HttpError("No blogs found", 404));
     }
 
-    return res.status(200).json({ blogs });
+    return res
+      .status(200)
+      .json({ blogs: blogs.map((blog) => blog.toObject({ getters: true })) });
   } catch (error) {
     return next(
       new HttpError(
@@ -30,7 +32,7 @@ const getBlogById = async (req, res, next) => {
       return next(new HttpError("Could not obtain specified blog.", 404));
     }
 
-    return res.status(200).json({ blog });
+    return res.status(200).json({ blog: blog.toObject({ getters: true }) });
   } catch (error) {
     return next(
       new HttpError(
