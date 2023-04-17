@@ -4,18 +4,12 @@ import Brand from "./Brand";
 import Subscribe from "./Subscribe";
 import UsefulLinks from "./UsefulLinks";
 import { NavLink as RouterLink } from "react-router-dom";
+import { backToTop } from "../../helpers/backToTop";
 
 const Footer = () => {
-  const backToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <Box
-      position={"relative"}
       padding="60px 0px 120px 0px"
       bg={"Dark"}
       color="white"
@@ -49,6 +43,7 @@ const Footer = () => {
             to="/policy"
             fontSize={"xs"}
             _hover={{ textDecor: "none" }}
+            onClick={backToTop}
           >
             <b>Privacy Policy</b>
           </Link>
@@ -57,6 +52,7 @@ const Footer = () => {
             to="/terms"
             fontSize={"xs"}
             _hover={{ textDecor: "none" }}
+            onClick={backToTop}
           >
             <b>Term of Service</b>
           </Link>
