@@ -40,6 +40,15 @@ export const Button = defineStyleConfig({
         bg: "Kiss",
       },
     },
+    icon: {
+      width: "80px",
+      height: "80px",
+      clipPath: "circle(35% at 50% 50%)",
+      bg: "#1D1D1D",
+      _hover: {
+        bg: "#1D1D1D",
+      },
+    },
   },
   defaultProps: {},
 });

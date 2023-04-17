@@ -9,6 +9,10 @@ const config: ThemeConfig = {
 
 export const theme = extendTheme({
   config,
+  fonts: {
+    heading: `'Poppins', sans-serif`,
+    body: `'Poppins', sans-serif`,
+  },
   colors: {
     Main: "#2571EA",
     Kiss: "#F4A7A5",
@@ -55,7 +59,7 @@ export const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         color: mode("Dark", "#FFFFFF")(props),
-        bg: mode("#FFFFFF", "#1D1D1D")(props),
+        bg: mode("#FFFFFF", "#060707")(props),
       },
     }),
   },

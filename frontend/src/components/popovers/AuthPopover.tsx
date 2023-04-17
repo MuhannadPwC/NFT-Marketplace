@@ -11,7 +11,6 @@ import {
   Text,
   VStack,
   Icon,
-  HStack,
 } from "@chakra-ui/react";
 import { NavLink as RouterLink } from "react-router-dom";
 import { HiUser } from "react-icons/hi";

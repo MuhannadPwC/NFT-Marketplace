@@ -1,25 +1,24 @@
 import {
-  Box,
   Button,
-  Container,
   Flex,
-  Heading,
   Image,
   Input,
   InputGroup,
-  InputRightAddon,
   InputRightElement,
   Link,
-  Switch,
-  Text,
   useColorMode,
 } from "@chakra-ui/react";
 import logo from "../assets/logo.svg";
 import logoNameDark from "../assets/logo-text-dark.svg";
 import logoNameLight from "../assets/logo-text-light.svg";
 import { NavLink as RouterLink } from "react-router-dom";
-import { MoonIcon, Search2Icon, SearchIcon, SunIcon } from "@chakra-ui/icons";
-import AuthPopover from "./AuthPopover";
+import {
+  MoonIcon,
+  Search2Icon,
+  SunIcon,
+} from "@chakra-ui/icons";
+import AuthPopover from "./popovers/AuthPopover";
+import CommunityPopover from "./popovers/CommunityPopover";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -54,7 +53,7 @@ const Navbar = () => {
         >
           Marketplace
         </Link>
-        <Text fontSize={"sm"}>Community</Text>
+        <CommunityPopover />
         <Link
           as={RouterLink}
           to="/activity"
