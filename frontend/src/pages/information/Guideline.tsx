@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 const Guideline = () => {
   return (

@@ -1,5 +1,6 @@
 import { extendTheme, StyleFunctionProps, ThemeConfig } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import { accordionStyles } from "./accordionStyles";
 import { Button } from "./buttonStyles";
 
 const config: ThemeConfig = {
@@ -65,5 +66,6 @@ export const theme = extendTheme({
   },
   components: {
     Button,
+    Accordion: accordionStyles,
   },
 });

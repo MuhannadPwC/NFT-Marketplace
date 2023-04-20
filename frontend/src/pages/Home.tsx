@@ -1,11 +1,16 @@
-import { Button, Container, Heading, useColorMode } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, SimpleGrid } from "@chakra-ui/react";
+import Headline from "../components/Home/Headline";
+import NftScroller from "../components/Home/NftScroller";
 
 const Home = () => {
 
   return (
-    <Container>
-      <Heading color="Blue">Home</Heading>
-    </Container>
+    <Box width={'82%'} m="auto">
+      <SimpleGrid columns={2} spacing="8">
+        <Headline />
+        <NftScroller />
+      </SimpleGrid>
+    </Box>
   );
 };
 

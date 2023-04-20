@@ -1,3 +1,35 @@
 main {
   margin-bottom: 50px;
 }
+
+.gradient-scroller::before {
+  content: "";
+  width: 604px;
+  height: 50px;
+  position: absolute;
+  top: 1;
+  right: 1;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.gradient-scroller::after {
+  content: "";
+  width: 604px;
+  height: 50px;
+  position: absolute;
+  top: 620px;
+  left: 1;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  will-change: opacity;
+  pointer-events: none;
+}

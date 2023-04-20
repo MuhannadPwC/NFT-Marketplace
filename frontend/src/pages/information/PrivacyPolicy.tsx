@@ -1,11 +1,4 @@
-import {
-  Container,
-  Flex,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 const PrivacyPolicy = () => {
   return (
