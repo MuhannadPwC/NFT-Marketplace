@@ -8,6 +8,7 @@ export const Button = defineStyleConfig({
     _hover: {
       bg: "pink",
     },
+    fontSize: "xs",
   },
   sizes: {
     sm: {
@@ -29,9 +30,17 @@ export const Button = defineStyleConfig({
   variants: {
     outline: {
       border: "1px solid #DCDEE6",
+      bg: "white",
       _hover: {
         bg: "Kiss",
         color: "white",
+      },
+      _dark: {
+        bg: "Dark",
+        _hover: {
+          bg: "Kiss",
+          color: "white",
+        },
       },
     },
     solid: {

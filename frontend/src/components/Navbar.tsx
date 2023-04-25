@@ -29,6 +29,11 @@ const Navbar = () => {
       align={"center"}
       padding="10px 84px"
       justify={"space-evenly"}
+      position="fixed"
+      top={"0"}
+      zIndex="1"
+      width="100%"
+      bg={colorMode === "light" ? "white" : "Dark"}
     >
       <Flex gap={"8px"} align="center">
         <Image src={logo} />

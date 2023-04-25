@@ -1,8 +1,9 @@
 main {
   margin-bottom: 50px;
+  margin-top: 80px;
 }
 
-.gradient-scroller::before {
+.gradient-scroller-light::before {
   content: "";
   width: 604px;
   height: 50px;
@@ -18,7 +19,7 @@ main {
   pointer-events: none;
 }
 
-.gradient-scroller::after {
+.gradient-scroller-light::after {
   content: "";
   width: 604px;
   height: 50px;
@@ -29,6 +30,38 @@ main {
     to bottom,
     rgba(255, 255, 255, 0) 0%,
     rgb(255, 255, 255) 100%
+  );
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.gradient-scroller-dark::before {
+  content: "";
+  width: 604px;
+  height: 50px;
+  position: absolute;
+  top: 1;
+  right: 1;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.gradient-scroller-dark::after {
+  content: "";
+  width: 604px;
+  height: 50px;
+  position: absolute;
+  top: 620px;
+  left: 1;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 0, 0) 100%
   );
   will-change: opacity;
   pointer-events: none;

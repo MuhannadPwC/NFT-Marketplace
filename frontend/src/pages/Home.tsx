@@ -1,11 +1,21 @@
-import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
+import BidHome from "../components/Home/Bid-Home";
 import Headline from "../components/Home/Headline";
 import NftScroller from "../components/Home/NftScroller";
+import TopCreator from "../components/Home/TopCreator";
+import { topCreators } from "../helpers/DummyData";
 
 const Home = () => {
   return (
-    <Box width={"82%"} m="auto">
-      <SimpleGrid columns={2} spacing="8">
+    <Box>
+      <SimpleGrid columns={2} spacing="8" width={"82%"} m="auto">
         <Headline />
         <NftScroller />
       </SimpleGrid>
@@ -15,32 +25,17 @@ const Home = () => {
           Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
         </Text>
         <Flex gap={12} mt="12" overflow={"scroll"}>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
+          {topCreators.map((user) => (
+            <TopCreator user={user} />
+          ))}
         </Flex>
-        <Flex gap={12} mt="6" overflow={"scroll"} direction="row-reverse">
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
-          <Box bg={"Main"} height="50px" minW={"200px"}></Box>
+        <Flex gap={12} mt="12" overflow={"scroll"} direction="row-reverse">
+          {topCreators.map((user) => (
+            <TopCreator user={user} />
+          ))}
         </Flex>
       </Box>
+      <BidHome />
     </Box>
   );
 };
