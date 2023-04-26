@@ -8,7 +8,7 @@ const Headline = () => {
         Discover the NFT for worldwide creators.
       </Heading>
       <Flex mt={5} direction="column" gap={"8px"}>
-        <Text opacity={"60%"} fontSize="lg">
+        <Text fontSize="lg">
           Buy and sell NFTs from the world's top artists
         </Text>
         <Flex gap={"12px"}>

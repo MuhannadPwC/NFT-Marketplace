@@ -5,7 +5,7 @@ const Brand = () => {
   return (
     <VStack gap={'4px'}>
       <Image src={logo}/>
-      <Text fontSize={'xs'} opacity="60%">
+      <Text>
         Lorem Ipsum is simply dummy text of the printing and <br /> typesetting
         industry. Lorem Ipsum has Upsum.Lorem Ipsum is <br /> simply dummy text
         of the printing and typesetting industry.

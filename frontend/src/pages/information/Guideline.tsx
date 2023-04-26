@@ -9,7 +9,7 @@ const Guideline = () => {
       <Text fontSize={"sm"} textAlign="center" mt={4} opacity="40%">
         Updated on 2nd December 2021
       </Text>
-      <Text fontSize={"sm"} opacity="60%" mt={"20"}>
+      <Text fontSize={"sm"} mt={"20"}>
         We want to build a community that empowers creators and collectors
         alike. Creating a new system of support for digital art requires mutual
         respect between creators, collectors, and curators. We hope you can
@@ -19,7 +19,7 @@ const Guideline = () => {
       <Heading mt={5} mb={5} fontSize="lg" fontWeight="extrabold">
         For the community
       </Heading>
-      <Text fontSize={"sm"} opacity="60%">
+      <Text fontSize={"sm"}>
         A community of artists and collectors who share their work and learn
         from each other in shared online spaces like Instagram and Twitter. To
         break from the old and start something truly new, we must be led by

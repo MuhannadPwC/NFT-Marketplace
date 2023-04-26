@@ -11,6 +11,13 @@ export const Button = defineStyleConfig({
     fontSize: "xs",
   },
   sizes: {
+    xs: {
+      borderRadius: "full",
+      padding: "6px 18px",
+      height: "32px",
+      fontSize: "xs",
+      fontWeight: "none",
+    },
     sm: {
       width: "114px",
       height: "32px",

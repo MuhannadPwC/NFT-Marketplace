@@ -14,7 +14,7 @@ const Subscribe = () => {
       <Heading color={"Kiss"} fontSize="2xl">
         Join our community
       </Heading>
-      <Text fontSize={"xs"} opacity="60%">
+      <Text>
         Meet the Known Origin team, artists and collectors for <br /> platform
         updates, announcements, and more...
       </Text>

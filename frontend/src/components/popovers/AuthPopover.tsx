@@ -52,7 +52,7 @@ const AuthPopover = () => {
               <Icon as={HiUser} color="Main" />
               <Link
                 as={RouterLink}
-                to="/user"
+                to="/" /* ADD LINK */
                 fontSize={"sm"}
                 _hover={{ textDecor: "none" }}
               >
@@ -63,7 +63,7 @@ const AuthPopover = () => {
               <Icon as={IoBag} color="Main" />
               <Link
                 as={RouterLink}
-                to="/user/orders"
+                to="/" /* ADD LINK */
                 fontSize={"sm"}
                 _hover={{ textDecor: "none" }}
               >

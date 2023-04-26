@@ -1,6 +1,5 @@
 import {
   Avatar,
-  Box,
   Button,
   Flex,
   Heading,
@@ -11,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import BidCard from "./Bid-Card";
 import avtr from "../../assets/userpfp.svg";
+import { NavLink } from "react-router-dom";
 
 const BidHome = () => {
   const { colorMode } = useColorMode();
@@ -32,7 +32,7 @@ const BidHome = () => {
         <Heading fontSize={"4xl"} textAlign="center">
           😍Live ART Bidding
         </Heading>
-        <Text fontSize={"sm"} opacity="60%" textAlign={"center"}>
+        <Text fontSize={"sm"} textAlign={"center"}>
           Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
         </Text>
       </Stack>
@@ -46,7 +46,7 @@ const BidHome = () => {
           <Text as={"b"} fontSize="xs">
             Mar 20 2020, 10:00pm
           </Text>
-          <Text fontSize={"xs"}>
+          <Text>
             Lorem Ipsum is simply dummy text of the printing and Lor Ipsum has
             been thtypesetting industry. Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s, when an unknown has been
@@ -60,7 +60,7 @@ const BidHome = () => {
                 <Text fontSize={"2xs"}>Owner</Text>
               </Stack>
             </Flex>
-            <Button variant={"outline"} fontSize="xs">
+            <Button as={NavLink} to="/" variant={"outline"} fontSize="xs"> {/* ADD LINK */}
               Explore Work
             </Button>
           </Flex>

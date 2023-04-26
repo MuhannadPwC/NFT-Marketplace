@@ -11,7 +11,7 @@ import {
 import logo from "../assets/logo.svg";
 import logoNameDark from "../assets/logo-text-dark.svg";
 import logoNameLight from "../assets/logo-text-light.svg";
-import { NavLink as RouterLink } from "react-router-dom";
+import { NavLink, NavLink as RouterLink } from "react-router-dom";
 import {
   MoonIcon,
   Search2Icon,
@@ -95,7 +95,7 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"20px"} align="center">
         <AuthPopover />
-        <Button size={"md"} fontSize="sm">
+        <Button as={NavLink} to="/" size={"md"} fontSize="sm"> {/* ADD LINK */}
           Connect Wallet
         </Button>
       </Flex>

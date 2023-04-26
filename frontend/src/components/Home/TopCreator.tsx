@@ -27,7 +27,7 @@ const TopCreator = ({ user }: any) => {
           <Heading fontSize={"md"}>{user.name}</Heading>
         </CardHeader>
         <CardFooter>
-          <Text fontSize="xs">{user.eth} ETH</Text>
+          <Text>{user.eth} ETH</Text>
         </CardFooter>
       </Stack>
     </Card>

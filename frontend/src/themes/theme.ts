@@ -62,6 +62,10 @@ export const theme = extendTheme({
         color: mode("Dark", "#FFFFFF")(props),
         bg: mode("#FFFFFF", "#060707")(props),
       },
+      p: {
+        opacity: "60%",
+        fontSize: "xs"
+      },
     }),
   },
   components: {

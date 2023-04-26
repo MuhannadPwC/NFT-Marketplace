@@ -70,3 +70,38 @@ export const topCreators = [
     eth: "3,431",
   },
 ];
+
+export const dummyNfts = [
+  {
+    creator: "Jared Lumpy",
+    bid: "1.0003",
+  },
+  {
+    creator: "Gordon Jumbus",
+    bid: "2.1223",
+  },
+  {
+    creator: "Jordan Compass",
+    bid: "0.0872",
+  },
+  {
+    creator: "Shin Malphur",
+    bid: "0.0023",
+  },
+  {
+    creator: "Dredgen Yor",
+    bid: "1.0029",
+  },
+  {
+    creator: "Zavala Reddick",
+    bid: "1.0001",
+  },
+  {
+    creator: "Lance Armstrong",
+    bid: "1.0110",
+  },
+  {
+    creator: "Ikora Rey",
+    bid: "1.0101",
+  },
+];

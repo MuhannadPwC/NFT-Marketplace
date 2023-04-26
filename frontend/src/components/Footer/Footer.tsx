@@ -34,7 +34,7 @@ const Footer = () => {
         />
       </Circle>
       <Flex pos={"absolute"} bottom={4} left={40} paddingBottom={4} gap={14}>
-        <Text fontSize={"xs"}>
+        <Text>
           &copy;2022 <b>Larcible.</b> All Right reserved
         </Text>
         <Flex gap={4}>
