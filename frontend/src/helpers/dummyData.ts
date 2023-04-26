@@ -105,3 +105,18 @@ export const dummyNfts = [
     bid: "1.0101",
   },
 ];
+
+export const collections = [
+  {
+    name: "Nft Art 3d",
+    creator: "Tianna Moore",
+  },
+  {
+    name: "Photography",
+    creator: "Jenny John",
+  },
+  {
+    name: "Digital Art",
+    creator: "Jekson Villis",
+  },
+];

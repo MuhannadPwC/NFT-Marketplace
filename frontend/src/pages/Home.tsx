@@ -11,9 +11,11 @@ import BidHome from "../components/Home/Bid-Home";
 import Headline from "../components/Home/Headline";
 import NftScroller from "../components/Home/NftScroller";
 import TopCreator from "../components/Home/TopCreator";
-import { topCreators } from "../helpers/dummyData";
+import { collections, dummyNfts, topCreators } from "../helpers/dummyData";
 import { NavLink } from "react-router-dom";
 import NftGrid from "../components/Marketplace/NFT-Grid";
+import CollectionCard from "../components/Home/CollectionCard";
+import CreateNftBox from "../components/Home/CreateNftBox";
 
 const Home = () => {
   return (
@@ -58,10 +60,31 @@ const Home = () => {
               from
             </Text>
           </Stack>
-          <Button as={NavLink} to="/market" variant={"outline"} fontSize="xs">Explore More</Button>
+          <Button as={NavLink} to="/market" variant={"outline"} fontSize="xs">
+            Explore More
+          </Button>
         </Flex>
-        <NftGrid />
+        <NftGrid nfts={dummyNfts} cols={4} />
       </Stack>
+      {/* End Marketplace */}
+
+      {/* Start Popular Collections */}
+      <Box width={"82%"} mx="auto" mt={"16"}>
+        <Heading>Popular Collections</Heading>
+        <Text mt={"4"} fontSize="sm">
+          Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
+        </Text>
+        <SimpleGrid columns={3} spacing={6} mt="4">
+          {collections.map(collection => (
+            <CollectionCard collection={collection} />
+          ))}
+        </SimpleGrid>
+      </Box>
+      {/* End Popular Collections */}
+
+      {/* Create NFT Box */}
+      <CreateNftBox />
+      {/* End */}
     </Box>
   );
 };
