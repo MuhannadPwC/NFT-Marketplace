@@ -66,6 +66,23 @@ export const Button = defineStyleConfig({
         bg: "#1D1D1D",
       },
     },
+    navigateicon: {
+      width: "40px",
+      height: "40px",
+      border: "1px solid #CED4DA",
+      borderRadius: "50%",
+      bg: "white",
+      _hover: {
+        bg: "Main",
+        color: "white",
+      },
+      _dark: {
+        bg: "transparent",
+        _hover: {
+          bg: "Main",
+        },
+      },
+    },
   },
   defaultProps: {},
 });

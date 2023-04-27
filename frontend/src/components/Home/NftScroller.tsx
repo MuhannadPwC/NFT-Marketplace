@@ -15,6 +15,7 @@ const NftScroller = () => {
   return (
     <Box
       h={"600px"}
+      position="relative"
       className={
         colorMode === "light"
           ? "gradient-scroller-light"

@@ -5,7 +5,7 @@ main {
 
 .gradient-scroller-light::before {
   content: "";
-  width: 604px;
+  width: 100%;
   height: 50px;
   position: absolute;
   top: 1;
@@ -21,10 +21,10 @@ main {
 
 .gradient-scroller-light::after {
   content: "";
-  width: 604px;
+  width: 100%;
   height: 50px;
   position: absolute;
-  top: 550px;
+  bottom: 0;
   left: 1;
   background-image: linear-gradient(
     to bottom,
@@ -37,7 +37,7 @@ main {
 
 .gradient-scroller-dark::before {
   content: "";
-  width: 604px;
+  width: 100%;
   height: 50px;
   position: absolute;
   top: 1;
@@ -53,10 +53,10 @@ main {
 
 .gradient-scroller-dark::after {
   content: "";
-  width: 604px;
+  width: 100%;
   height: 50px;
   position: absolute;
-  top: 550px;
+  bottom: 0;
   left: 1;
   background-image: linear-gradient(
     to bottom,
@@ -78,7 +78,7 @@ main {
 .container-gradient:hover {
   background-image: linear-gradient(
     122.82deg,
-    #A4F5E634 51.65%,
-    #487ADE34 77.92%
+    #a4f5e634 51.65%,
+    #487ade34 77.92%
   );
 }

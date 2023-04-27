@@ -120,3 +120,40 @@ export const collections = [
     creator: "Jekson Villis",
   },
 ];
+
+export const collectors = [
+  {
+    username: "Swagalirious",
+    items: "6",
+    price: "1.23455",
+  },
+  {
+    username: "ChocolateThunder",
+    items: "12",
+    price: "2.23455",
+  },
+  {
+    username: "DaSalamiLid",
+    items: "19",
+    price: "1.93645",
+  },
+];
+
+export const recommended = [
+  {
+    creator: "Jared Lumpy",
+    bid: "1.0003",
+  },
+  {
+    creator: "Jared Lumpy",
+    bid: "1.0003",
+  },
+  {
+    creator: "Jared Lumpy",
+    bid: "1.0003",
+  },
+  {
+    creator: "Jared Lumpy",
+    bid: "1.0003",
+  },
+];
