@@ -32,7 +32,7 @@ const NftCard = ({ nft }: any) => {
       onMouseOver={() => setShowButton(true)}
       onMouseOut={() => setShowButton(false)}
     >
-      <Container position={"relative"}>
+      <Container position={"relative"} centerContent>
         <Image
           src={nft?.image}
           fallbackSrc={nftImage}

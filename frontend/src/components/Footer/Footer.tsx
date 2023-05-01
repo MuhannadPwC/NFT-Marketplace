@@ -4,7 +4,7 @@ import Brand from "./Brand";
 import Subscribe from "./Subscribe";
 import UsefulLinks from "./UsefulLinks";
 import { NavLink as RouterLink } from "react-router-dom";
-import { backToTop } from "../../helpers/backToTop";
+import { backToTop } from "../../helpers/functions/backToTop";
 
 const Footer = () => {
 

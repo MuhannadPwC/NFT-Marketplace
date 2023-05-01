@@ -12,12 +12,14 @@ import Faq from "./pages/information/FAQ";
 import Guideline from "./pages/information/Guideline";
 import PrivacyPolicy from "./pages/information/PrivacyPolicy";
 import TermsOfService from "./pages/information/TermsOfService";
+import MarketPlace from "./pages/market/MarketPlace";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
+      <Route path="/market" element={<MarketPlace />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/contact" element={<ContactUs />} />
