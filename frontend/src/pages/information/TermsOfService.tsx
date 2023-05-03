@@ -1,4 +1,5 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
+import { buyNsell } from "../../helpers/Global";
 
 const TermsOfService = () => {
   return (
@@ -7,7 +8,7 @@ const TermsOfService = () => {
         <b>Terms of Service</b>
       </Heading>
       <Text fontSize={"sm"} textAlign="center" mt={4} opacity="40%">
-        Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
+        {buyNsell}
       </Text>
       <Text fontSize={"sm"} opacity="60%" mt={"20"} mb={4}>
         These Supplemental Terms (“Supplemental Terms”) supplement the Terms and

@@ -11,6 +11,7 @@ import {
 import BidCard from "./Bid-Card";
 import avtr from "../../assets/userpfp.svg";
 import { NavLink } from "react-router-dom";
+import { buyNsell } from "../../helpers/Global";
 
 const BidHome = () => {
   const { colorMode } = useColorMode();
@@ -33,13 +34,18 @@ const BidHome = () => {
           😍Live ART Bidding
         </Heading>
         <Text fontSize={"sm"} textAlign={"center"}>
-          Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
+          {buyNsell}
         </Text>
       </Stack>
       <Flex gap={"6"} justify="center" width={"100%"}>
         <BidCard />
         <VStack w={"30%"} justify="center" align={"flex-start"} gap="2">
-          <Text fontSize={"2xs"} bg={colorMode === "light" ? "white" : "Dark"} p="8px" borderRadius={"full"} >
+          <Text
+            fontSize={"2xs"}
+            bg={colorMode === "light" ? "white" : "Dark"}
+            p="8px"
+            borderRadius={"full"}
+          >
             Remaining Time: 12H : 9M : 45S
           </Text>
           <Heading fontSize={"2xl"}>A Brush with Arts</Heading>
@@ -60,7 +66,9 @@ const BidHome = () => {
                 <Text fontSize={"2xs"}>Owner</Text>
               </Stack>
             </Flex>
-            <Button as={NavLink} to="/" variant={"outline"} fontSize="xs"> {/* ADD LINK */}
+            <Button as={NavLink} to="/" variant={"outline"} fontSize="xs">
+              {" "}
+              {/* ADD LINK */}
               Explore Work
             </Button>
           </Flex>

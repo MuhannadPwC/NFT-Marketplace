@@ -1,4 +1,5 @@
 import { Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { buyNsell } from "../../helpers/Global";
 
 const PrivacyPolicy = () => {
   return (
@@ -7,7 +8,7 @@ const PrivacyPolicy = () => {
         <b>Larcible Privacy Policy</b>
       </Heading>
       <Text fontSize={"sm"} textAlign="center" mt={4} opacity="40%">
-        Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
+        {buyNsell}
       </Text>
       <Text fontSize={"sm"} opacity="60%" mt={"20"}>
         his Privacy Policy describes how Coinbase Technologies, Inc. (“larcible

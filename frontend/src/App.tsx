@@ -4,6 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import MarketLayout from "./layouts/MarketLayout";
 import RootLayout from "./layouts/RootLayout";
 import Activity from "./pages/Activity";
 import Home from "./pages/Home";
@@ -14,13 +15,17 @@ import Guideline from "./pages/information/Guideline";
 import PrivacyPolicy from "./pages/information/PrivacyPolicy";
 import TermsOfService from "./pages/information/TermsOfService";
 import MarketPlace from "./pages/market/MarketPlace";
+import NftDetails from "./pages/market/NftDetails";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="/market" element={<MarketPlace />} />
+      <Route path="/market" element={<MarketLayout />}>
+        <Route index element={<MarketPlace />} />
+        <Route path=":id" element={<NftDetails />} />
+      </Route>
       <Route path="/activity" element={<Activity />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<Faq />} />

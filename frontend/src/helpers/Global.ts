@@ -8,3 +8,5 @@ export const categories = [
   "Trading Card",
   "Virtual Card",
 ];
+
+export const buyNsell = `Buy and sell NFTs from the world's top artistsBuy and sell NFTs from`;

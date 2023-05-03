@@ -16,6 +16,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import nftImage from "../../assets/image3.png";
 import avtr from "../../assets/userpfp.svg";
+import UserCard from "../user/UserCard";
 
 const NftCard = ({ nft }: any) => {
   const [showButton, setShowButton] = useState(false);
@@ -25,7 +26,7 @@ const NftCard = ({ nft }: any) => {
       pt={"2"}
       pb="3"
       bg="#F8F8F8"
-      _dark={{ bg: "#1D1D1D", _hover: { bg: "white", color: "Dark"} }}
+      _dark={{ bg: "#1D1D1D", _hover: { bg: "white", color: "Dark" } }}
       size="sm"
       borderRadius={"lg"}
       _hover={{ bg: "white" }}
@@ -57,13 +58,7 @@ const NftCard = ({ nft }: any) => {
       <CardBody>
         <Stack gap={"2"}>
           <Heading fontSize={"md"}>A Brush with Arts</Heading>
-          <Flex gap={"3"}>
-            <Avatar src={avtr} size="sm" />
-            <Box>
-              <Text opacity={1}>Creator</Text>
-              <Heading fontSize={"xs"}>{nft.creator}</Heading>
-            </Box>
-          </Flex>
+          <UserCard user={nft.creator} type="Creator" avtrSize="sm" />
           <Stack>
             <Text as={"b"} fontSize="xs">
               Current Bid:

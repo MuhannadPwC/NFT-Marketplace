@@ -225,10 +225,10 @@ export const activityNfts = [
 ];
 export type ActivityCardProps = {
   nft: {
-    from: String;
-    to: String;
-    price: String;
-    quantity: Number;
+    from: string;
+    to: string;
+    price: string;
+    quantity: number;
     datePosted: Date;
   };
 };

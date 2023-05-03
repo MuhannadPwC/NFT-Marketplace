@@ -15,6 +15,7 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import { buyNsell } from "../../helpers/Global";
 
 const Faq = () => {
   return (
@@ -23,7 +24,7 @@ const Faq = () => {
         Frequently Asked Questions
       </Heading>
       <Text fontSize={"sm"} textAlign="center" mt={4} mb={"20"} opacity="40%">
-        Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
+        {buyNsell}
       </Text>
       <Box width={"80%"} m={"auto"}>
         <Accordion allowToggle>
@@ -74,18 +75,19 @@ const Faq = () => {
                     <ChevronRightIcon fontSize="24px" />
                   )}
                 </AccordionButton>
-                <AccordionPanel fontSize={'sm'} opacity="60%">
+                <AccordionPanel fontSize={"sm"} opacity="60%">
                   A non-fungible token, or NFT, is a blockchain-based token that
                   represents the ownership and provenanceof a specific asset,
                   such as an image or video a blockchain-based token that
                   represents the ownership and provenanceof a specific asset,
-                  such as an image or video.. 
-                  <br /><br />
-                  How can I sell an NFT? Please head
-                  to your profile page, click List Now on the NFT you want to
-                  sell, and then enter the NFT Listing page. Next, please follow
-                  the steps below to list your NFT: 1. Choose the pricing token
-                  (USDT, BIT, XTZ or ETH). 2. Enter the quantity.
+                  such as an image or video..
+                  <br />
+                  <br />
+                  How can I sell an NFT? Please head to your profile page, click
+                  List Now on the NFT you want to sell, and then enter the NFT
+                  Listing page. Next, please follow the steps below to list your
+                  NFT: 1. Choose the pricing token (USDT, BIT, XTZ or ETH). 2.
+                  Enter the quantity.
                 </AccordionPanel>
               </>
             )}

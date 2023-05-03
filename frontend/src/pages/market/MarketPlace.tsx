@@ -11,15 +11,14 @@ import {
 import Filters from "../../components/Marketplace/Filters";
 import NftGrid from "../../components/Marketplace/NFT-Grid";
 import { dummyNfts } from "../../helpers/dummyData";
+import { buyNsell } from "../../helpers/Global";
 
 const MarketPlace = () => {
   return (
     <Box w={"82%"} m="auto">
       <Stack gap={"3"} justify="center" align={"center"} mt="40">
         <Heading>Marketplace</Heading>
-        <Text fontSize={"sm"}>
-          Buy and sell NFTs from the world's top artistsBuy and sell NFTs from
-        </Text>
+        <Text fontSize={"sm"}>{buyNsell}</Text>
       </Stack>
       <Grid templateColumns={"20% 80%"} columnGap="12" mt={"8"}>
         <GridItem>

@@ -19,3 +19,10 @@ export const dateSubtraction = (today: Date, otherDate: Date) => {
 
   return `${mins} mins ago`;
 };
+
+export const thousandToK = (num: number) => {
+  if (num >= 1000) {
+    num = Math.floor(num / 100) / 10;
+  }
+  return num;
+};
