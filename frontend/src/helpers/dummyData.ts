@@ -157,3 +157,78 @@ export const recommended = [
     bid: "1.0003",
   },
 ];
+
+export const activityNfts = [
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.058",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.116",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.234",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "1.231",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.053",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.053",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.053",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.053",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+  {
+    from: "Gandalf the Great",
+    to: "Ganondorf",
+    price: "0.053",
+    quantity: 1,
+    datePosted: new Date(2023, 4, 3, 11, 30),
+  },
+];
+export type ActivityCardProps = {
+  nft: {
+    from: String;
+    to: String;
+    price: String;
+    quantity: Number;
+    datePosted: Date;
+  };
+};

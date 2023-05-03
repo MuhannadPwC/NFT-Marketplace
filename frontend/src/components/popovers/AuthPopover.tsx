@@ -15,12 +15,14 @@ import {
 import { NavLink as RouterLink } from "react-router-dom";
 import { HiUser } from "react-icons/hi";
 import { IoBag } from "react-icons/io5";
+import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const AuthPopover = () => {
   return (
     <Popover trigger="hover" placement="bottom-start">
       <PopoverTrigger>
         <Link
+          onClick={backToTop}
           as={RouterLink}
           to="/auth"
           _hover={{ textDecor: "none" }}
@@ -37,6 +39,7 @@ const AuthPopover = () => {
               New Customer?
             </Text>
             <Link
+              onClick={backToTop}
               as={RouterLink}
               to="/auth"
               color={"Main"}
@@ -51,6 +54,7 @@ const AuthPopover = () => {
             <Flex align={"center"} gap="12px" width={"200px"}>
               <Icon as={HiUser} color="Main" />
               <Link
+                onClick={backToTop}
                 as={RouterLink}
                 to="/" /* ADD LINK */
                 fontSize={"sm"}
@@ -62,6 +66,7 @@ const AuthPopover = () => {
             <Flex align={"center"} gap="12px" width={"200px"}>
               <Icon as={IoBag} color="Main" />
               <Link
+                onClick={backToTop}
                 as={RouterLink}
                 to="/" /* ADD LINK */
                 fontSize={"sm"}

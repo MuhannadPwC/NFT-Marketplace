@@ -124,7 +124,7 @@ const Home = () => {
               icon={<ArrowBackIcon />}
             />
             <IconButton
-              aria-label="prev"
+              aria-label="next"
               variant={"navigateicon"}
               icon={<ArrowForwardIcon />}
             />

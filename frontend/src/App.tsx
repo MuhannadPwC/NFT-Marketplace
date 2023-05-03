@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
+import Activity from "./pages/Activity";
 import Home from "./pages/Home";
 import About from "./pages/information/About";
 import ContactUs from "./pages/information/ContactUs";
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="/market" element={<MarketPlace />} />
+      <Route path="/activity" element={<Activity />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/contact" element={<ContactUs />} />

@@ -1,6 +1,6 @@
 import { Flex, Heading, Link, VStack } from "@chakra-ui/react";
 import { NavLink as RouterLink, Route } from "react-router-dom";
-import { backToTop } from "../../helpers/functions/backToTop";
+import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const UsefulLinks = () => {
   return (

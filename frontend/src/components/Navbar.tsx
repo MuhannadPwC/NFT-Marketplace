@@ -11,14 +11,11 @@ import {
 import logo from "../assets/logo.svg";
 import logoNameDark from "../assets/logo-text-dark.svg";
 import logoNameLight from "../assets/logo-text-light.svg";
-import { NavLink, NavLink as RouterLink } from "react-router-dom";
-import {
-  MoonIcon,
-  Search2Icon,
-  SunIcon,
-} from "@chakra-ui/icons";
+import { NavLink } from "react-router-dom";
+import { MoonIcon, Search2Icon, SunIcon } from "@chakra-ui/icons";
 import AuthPopover from "./popovers/AuthPopover";
 import CommunityPopover from "./popovers/CommunityPopover";
+import { backToTop } from "../helpers/functions/helperFunctions";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -41,7 +38,8 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"30px"} align="center">
         <Link
-          as={RouterLink}
+          onClick={backToTop}
+          as={NavLink}
           to="/"
           fontSize={"sm"}
           _activeLink={{ color: "Main", textDecoration: "none" }}
@@ -50,7 +48,8 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          as={RouterLink}
+          onClick={backToTop}
+          as={NavLink}
           to="/market"
           fontSize={"sm"}
           _activeLink={{ color: "Main", textDecoration: "none" }}
@@ -60,7 +59,8 @@ const Navbar = () => {
         </Link>
         <CommunityPopover />
         <Link
-          as={RouterLink}
+          onClick={backToTop}
+          as={NavLink}
           to="/activity"
           fontSize={"sm"}
           _activeLink={{ color: "Main", textDecoration: "none" }}
@@ -69,7 +69,8 @@ const Navbar = () => {
           Activity
         </Link>
         <Link
-          as={RouterLink}
+          onClick={backToTop}
+          as={NavLink}
           to="/blogs"
           fontSize={"sm"}
           _activeLink={{ color: "Main", textDecoration: "none" }}
@@ -95,7 +96,9 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"20px"} align="center">
         <AuthPopover />
-        <Button as={NavLink} to="/" size={"md"} fontSize="sm"> {/* ADD LINK */}
+        <Button as={NavLink} to="/" size={"md"} fontSize="sm">
+          {" "}
+          {/* ADD LINK */}
           Connect Wallet
         </Button>
       </Flex>
