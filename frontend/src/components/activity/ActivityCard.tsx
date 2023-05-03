@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardBody,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Card, CardBody, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { ActivityCardProps } from "../../helpers/dummyData";
 import img from "../../assets/image4.png";
 import { dateSubtraction } from "../../helpers/functions/helperFunctions";
@@ -34,14 +27,14 @@ const ActivityCard = ({ nft }: ActivityCardProps) => {
           A Brush with Arts
         </Heading>
         <Text opacity={1} pb="1">
-          From
+          From{" "}
           <Link as={NavLink} to="" color={"Main"}>
             {nft.from}
           </Link>
         </Text>
         {/* ADD LINK */}
         <Text opacity={1} pb="1">
-          To
+          To{" "}
           <Link as={NavLink} to="" color={"Main"}>
             {nft.to}
           </Link>
