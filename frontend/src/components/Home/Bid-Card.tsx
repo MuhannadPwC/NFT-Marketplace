@@ -11,7 +11,7 @@ const BidCard = () => {
           <Text as={"b"} fontSize="xs">Current Bid:</Text>
           <Heading fontSize={"lg"}>4.08 ETH</Heading>
         </Stack>
-        <Button as={NavLink} to="/" fontSize={"sm"}>Place A Bid</Button> {/* ADD LINK */}
+        <Button as={NavLink} to="/" fontSize={"sm"}>Place A Bid</Button> {/* TODO: ADD LINK */}
       </CardFooter>
     </Card>
   );

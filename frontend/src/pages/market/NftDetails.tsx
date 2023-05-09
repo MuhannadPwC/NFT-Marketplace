@@ -52,7 +52,7 @@ const NftDetails = () => {
               Place A Bid
             </Button>
             <Button fontSize={"xs"} width="40%" variant={"outline"}>
-              Buy Now For {/* ADD Price */} ETH
+              Buy Now For {/* TODO: ADD Price */} ETH
             </Button>
           </Flex>
           <NftTabs />

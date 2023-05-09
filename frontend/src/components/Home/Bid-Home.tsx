@@ -68,7 +68,7 @@ const BidHome = () => {
             </Flex>
             <Button as={NavLink} to="/" variant={"outline"} fontSize="xs">
               {" "}
-              {/* ADD LINK */}
+              {/* TODO: ADD LINK */}
               Explore Work
             </Button>
           </Flex>

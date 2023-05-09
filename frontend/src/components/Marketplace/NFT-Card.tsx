@@ -53,7 +53,7 @@ const NftCard = ({ nft }: any) => {
             Place a Bid
           </Button>
         )}
-        {/* ADD LINK */}
+        {/* TODO: ADD LINK */}
       </Container>
       <CardBody>
         <Stack gap={"2"}>

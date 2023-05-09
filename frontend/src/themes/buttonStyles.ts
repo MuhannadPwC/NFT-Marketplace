@@ -36,7 +36,7 @@ export const Button = defineStyleConfig({
   },
   variants: {
     outline: {
-      border: "1px solid #DCDEE6",
+      border: "1px solid #CDCDCD",
       bg: "white",
       _hover: {
         bg: "Kiss",
@@ -44,6 +44,7 @@ export const Button = defineStyleConfig({
       },
       _dark: {
         bg: "Dark",
+        border: "1px solid white",
         _hover: {
           bg: "Kiss",
           color: "white",
@@ -83,6 +84,18 @@ export const Button = defineStyleConfig({
         },
       },
     },
+    social: {
+      width: "180px",
+      minW: "100px",
+      height: "45px",
+      bg: "transparent",
+      border: "1px solid #2571EA",
+      borderRadius: "md",
+      fontSize: "xs",
+      _hover: {
+        bg: "transparent",
+      }
+    }
   },
   defaultProps: {},
 });

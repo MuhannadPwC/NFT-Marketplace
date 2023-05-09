@@ -34,13 +34,13 @@ const BidCard = () => {
               <Text opacity={1} fontSize={"2xs"}>
                 From:
                 <Link as={NavLink} to="" color={"Main"}>
-                  @{/* ADD Username and ADD LINK */}Darius
+                  @{/* TODO: ADD Username and ADD LINK */}Darius
                 </Link>
               </Text>
               <Text opacity={1} fontSize={"2xs"}>
                 To:{" "}
                 <Link as={NavLink} to="" color={"Main"}>
-                  @{/* ADD Username and Link */}tsht20
+                  @{/* TODO: ADD Username and Link */}tsht20
                 </Link>
               </Text>
             </Flex>

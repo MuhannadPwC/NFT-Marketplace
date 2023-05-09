@@ -19,7 +19,7 @@ const ActivityCard = ({ nft }: ActivityCardProps) => {
       overflow="hidden"
       _hover={{ bg: "white" }}
       as={NavLink}
-      to="" /* ADD LINK */
+      to="" /* TODO: ADD LINK */
     >
       <Image src={img} objectFit={"contain"} maxW={"40"} minW="24" />
       <CardBody>
@@ -32,7 +32,7 @@ const ActivityCard = ({ nft }: ActivityCardProps) => {
             {nft.from}
           </Link>
         </Text>
-        {/* ADD LINK */}
+        {/* TODO: ADD LINK */}
         <Text opacity={1} pb="1">
           To{" "}
           <Link as={NavLink} to="" color={"Main"}>

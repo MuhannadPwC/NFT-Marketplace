@@ -25,6 +25,7 @@ const AuthPopover = () => {
           onClick={backToTop}
           as={RouterLink}
           to="/auth"
+          state={false}
           _hover={{ textDecor: "none" }}
           fontSize={"sm"}
         >
@@ -42,6 +43,7 @@ const AuthPopover = () => {
               onClick={backToTop}
               as={RouterLink}
               to="/auth"
+              state={true}
               color={"Main"}
               _hover={{ textDecor: "none" }}
             >
@@ -56,7 +58,7 @@ const AuthPopover = () => {
               <Link
                 onClick={backToTop}
                 as={RouterLink}
-                to="/" /* ADD LINK */
+                to="/" /* TODO: ADD LINK */
                 fontSize={"sm"}
                 _hover={{ textDecor: "none" }}
               >
@@ -68,7 +70,7 @@ const AuthPopover = () => {
               <Link
                 onClick={backToTop}
                 as={RouterLink}
-                to="/" /* ADD LINK */
+                to="/" /* TODO: ADD LINK */
                 fontSize={"sm"}
                 _hover={{ textDecor: "none" }}
               >

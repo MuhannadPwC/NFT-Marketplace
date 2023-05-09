@@ -17,6 +17,8 @@ import TermsOfService from "./pages/information/TermsOfService";
 import MarketPlace from "./pages/market/MarketPlace";
 import NftDetails from "./pages/market/NftDetails";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/user/Auth";
+import ConnectWallet from "./pages/user/ConnectWallet";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
         <Route index element={<MarketPlace />} />
         <Route path=":id" element={<NftDetails />} />
       </Route>
+      <Route path="/auth" element={<Auth />} />
+      <Route path="/wallet" element={<ConnectWallet />} />
       <Route path="/activity" element={<Activity />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<Faq />} />

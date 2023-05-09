@@ -10,7 +10,6 @@ import {
 import collectorPfp from "../../assets/collector.png";
 
 const CollectorCard = ({ collector }: any) => {
-  const usernameColor = () => {};
 
   return (
     <Card
@@ -26,16 +25,16 @@ const CollectorCard = ({ collector }: any) => {
       }}
       _hover={{
         bgGradient: "linear(to-r, Main 0.53%, #7185D0 29.11%, #F5A8A4 78.24%)",
+        color: "white"
       }}
-      onMouseOver={usernameColor}
     >
       <Image src={collectorPfp} borderRadius="2xl" objectFit={"contain"} />
-      <CardBody _hover={{ color: "white" }}>
+      <CardBody>
         <Flex justify={"space-between"}>
           <Stack>
             <Heading
               fontSize={"sm"}
-              bgGradient="linear(to-r, Main 0.53%, #7185D0 29.11%, #F5A8A4 78.24%)" /* REMOVE GRADIENT ON HOVER */
+              bgGradient="linear(to-r, Main 0.53%, #7185D0 29.11%, #F5A8A4 78.24%)" /* TODO: REMOVE GRADIENT ON HOVER */
               bgClip={"text"}
             >
               @{collector.username}

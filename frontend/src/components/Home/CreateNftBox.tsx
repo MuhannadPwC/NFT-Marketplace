@@ -40,7 +40,7 @@ const CreateNftBox = () => {
             ever since the 1500s, when an unknown printer took.
           </Text>
           <Button as={NavLink} to="/" fontSize={"xs"} mt="3">
-            {/* ADD LINK */}
+            {/* TODO: ADD LINK */}
             Create your item
           </Button>
         </GridItem>

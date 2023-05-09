@@ -96,9 +96,7 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"20px"} align="center">
         <AuthPopover />
-        <Button as={NavLink} to="/" size={"md"} fontSize="sm">
-          {" "}
-          {/* ADD LINK */}
+        <Button as={NavLink} to="/wallet" size={"md"} fontSize="xs" h={"10"} w="32">
           Connect Wallet
         </Button>
       </Flex>

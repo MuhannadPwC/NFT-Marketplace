@@ -15,7 +15,7 @@ const CommunityPopover = () => {
   return (
     <Popover trigger="hover">
       <PopoverTrigger>
-        <Text fontSize={"sm"}>
+        <Text fontSize={"sm"} opacity="1">
           Community <ChevronDownIcon />
         </Text>
       </PopoverTrigger>
