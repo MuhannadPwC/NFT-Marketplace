@@ -1,5 +1,5 @@
 import { Card, CardBody, Heading, Image, Link, Text } from "@chakra-ui/react";
-import { ActivityCardProps } from "../../helpers/dummyData";
+import { ActivityCardProps } from "../../helpers/types/propsTypes";
 import img from "../../assets/image4.png";
 import { dateSubtraction } from "../../helpers/functions/helperFunctions";
 import { NavLink } from "react-router-dom";

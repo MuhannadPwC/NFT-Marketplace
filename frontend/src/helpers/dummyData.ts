@@ -223,12 +223,36 @@ export const activityNfts = [
     datePosted: new Date(2023, 4, 3, 11, 30),
   },
 ];
-export type ActivityCardProps = {
-  nft: {
-    from: string;
-    to: string;
-    price: string;
-    quantity: number;
-    datePosted: Date;
-  };
-};
+
+export const blogs = [
+  {
+    title: "The next big trend in marketplace",
+    creator: "Salvador",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+  {
+    title: "Artist Invite: Yung Jake and Lucien Smith",
+    creator: "Felipe",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+  {
+    title: "Visual Storytelling with Alejandro",
+    creator: "Arsenal",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+  {
+    title: "Announcing our $100m Raisa,A1Studio",
+    creator: "A1Studio",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+  {
+    title: "The Biggest Drop In Times Square",
+    creator: "Brainman",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+  {
+    title: "The Biggest Drop In Times Square Since",
+    creator: "Weasel",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a eum culpa cum accusamus eius placeat quae quos, aperiam numquam est consectetur exercitationem laborum asperiores rem fugit qui itaque excepturi!`,
+  },
+];

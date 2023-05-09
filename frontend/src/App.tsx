@@ -4,9 +4,12 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import BlogLayout from "./layouts/BlogLayout";
 import MarketLayout from "./layouts/MarketLayout";
 import RootLayout from "./layouts/RootLayout";
 import Activity from "./pages/Activity";
+import BlogDetails from "./pages/blog/BlogDetails";
+import BlogsList from "./pages/blog/BlogsList";
 import Home from "./pages/Home";
 import About from "./pages/information/About";
 import ContactUs from "./pages/information/ContactUs";
@@ -30,6 +33,10 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/auth" element={<Auth />} />
       <Route path="/wallet" element={<ConnectWallet />} />
+      <Route path="/blogs" element={<BlogLayout />}>
+        <Route index element={<BlogsList />} />
+        <Route path=":id" element={<BlogDetails />} />
+      </Route>
       <Route path="/activity" element={<Activity />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<Faq />} />
