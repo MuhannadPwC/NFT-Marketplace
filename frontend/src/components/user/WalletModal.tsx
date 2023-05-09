@@ -39,7 +39,6 @@ const WalletModal = ({ isOpen, onClose, img }: any) => {
               <Text fontSize={"sm"}>Your wallet is now connected</Text>
             </Stack>
             <Button w={"70%"} fontSize="xs" as={NavLink} to="/">
-              {" "}
               {/* TODO: ADD LINK */}
               Get Started Now
             </Button>
