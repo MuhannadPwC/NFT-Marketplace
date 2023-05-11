@@ -64,7 +64,7 @@ const Signup = () => {
                   label="Confirm Password"
                 />
               </Flex>
-              <Checkbox alignSelf={"flex-start"}>
+              <Checkbox alignSelf={"flex-start"} isRequired>
                 <Text>
                   I agree to all <u>Terms</u> and <u>conditions</u> and Privacy
                   Policy

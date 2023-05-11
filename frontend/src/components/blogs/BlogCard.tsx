@@ -30,7 +30,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
             w={"24"}
             h="9"
             as={NavLink}
-            to="/blogs/id"
+            to="id"
             /* TODO: ADD LINK */
           >
             Read More

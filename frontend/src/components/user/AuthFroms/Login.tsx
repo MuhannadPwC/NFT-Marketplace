@@ -2,6 +2,7 @@ import { Box, Button, Checkbox, Flex, Link, Stack, Text } from "@chakra-ui/react
 import { Form, Formik } from "formik";
 import { NavLink } from "react-router-dom";
 import * as Yup from "yup";
+import { backToTop } from "../../../helpers/functions/helperFunctions";
 import { LoginValues } from "../../../helpers/types/otherTypes";
 import InputField from "./InputField";
 
@@ -34,7 +35,7 @@ const Login = () => {
                     Remember me
                   </Text>
                 </Checkbox>
-                <Link as={NavLink} to={"reset-password"} fontSize="xs" color={"Main"} >Forgot Password?</Link>
+                <Link as={NavLink} to={"reset-password"} fontSize="xs" color={"Main"} onClick={backToTop}>Forgot Password?</Link>
               </Flex>
               <Button
                 type="submit"

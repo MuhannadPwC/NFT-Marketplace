@@ -21,7 +21,7 @@ const BlogsList = () => {
           <BlogCard blog={blog} />
         ))}
       </SimpleGrid>
-      <Button fontSize={"xs"} w="24" h={10}>
+      <Button fontSize={"xs"} w="24" h={10} mt="6">
         Load More
       </Button>
     </>

@@ -19,8 +19,10 @@ const ResetPassword = () => {
     <Card
       mt={"44"}
       mx="auto"
+      mb="20"
       width={"32%"}
       px="5"
+      pb={"4"}
       borderRadius={"lg"}
       boxShadow={"lg"}
     >
@@ -54,7 +56,7 @@ const ResetPassword = () => {
           </Text>
         </Stack>
       </CardBody>
-      <CardFooter></CardFooter>
+
     </Card>
   );
 };

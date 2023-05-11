@@ -1,7 +1,10 @@
 import { Card, CardBody, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { ActivityCardProps } from "../../helpers/types/propsTypes";
 import img from "../../assets/image4.png";
-import { dateSubtraction } from "../../helpers/functions/helperFunctions";
+import {
+  backToTop,
+  dateSubtraction,
+} from "../../helpers/functions/helperFunctions";
 import { NavLink } from "react-router-dom";
 
 const ActivityCard = ({ nft }: ActivityCardProps) => {
@@ -28,14 +31,14 @@ const ActivityCard = ({ nft }: ActivityCardProps) => {
         </Heading>
         <Text opacity={1} pb="1">
           From{" "}
-          <Link as={NavLink} to="" color={"Main"}>
+          <Link as={NavLink} to="" color={"Main"} onClick={backToTop}>
             {nft.from}
           </Link>
         </Text>
         {/* TODO: ADD LINK */}
         <Text opacity={1} pb="1">
           To{" "}
-          <Link as={NavLink} to="" color={"Main"}>
+          <Link as={NavLink} to="" color={"Main"} onClick={backToTop}>
             {nft.to}
           </Link>
         </Text>

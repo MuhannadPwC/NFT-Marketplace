@@ -43,9 +43,9 @@ const NftCard = ({ nft }: any) => {
         {showButton && (
           <Button
             as={NavLink}
-            to="/"
+            to="id"
             position={"absolute"}
-            left={"7"}
+            left={"8"}
             bottom="5"
             width="80%"
             fontSize={"sm"}

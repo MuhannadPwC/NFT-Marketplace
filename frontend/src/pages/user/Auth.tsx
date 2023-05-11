@@ -15,6 +15,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { useLocation } from "react-router-dom";
 import Login from "../../components/user/AuthFroms/Login";
 import Signup from "../../components/user/AuthFroms/Signup";
+import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const Auth = () => {
   const location = useLocation();
@@ -93,7 +94,7 @@ const Auth = () => {
           <Text opacity={1}>
             Already have an account?{" "}
             <Link
-              onClick={() => setIsSignUp(false)}
+              onClick={() => {setIsSignUp(false); backToTop()}}
               color="Main"
               textDecoration={"underline"}
             >
@@ -104,7 +105,7 @@ const Auth = () => {
           <Text opacity={1}>
             Don't have an account?{" "}
             <Link
-              onClick={() => setIsSignUp(true)}
+              onClick={() => {setIsSignUp(true); backToTop()}}
               color="Main"
               textDecoration={"underline"}
             >
