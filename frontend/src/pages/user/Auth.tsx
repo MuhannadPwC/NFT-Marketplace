@@ -13,7 +13,8 @@ import { useEffect, useState } from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
 import { useLocation } from "react-router-dom";
-import AuthForm from "../../components/user/AuthForm";
+import Login from "../../components/user/AuthFroms/Login";
+import Signup from "../../components/user/AuthFroms/Signup";
 
 const Auth = () => {
   const location = useLocation();
@@ -62,12 +63,16 @@ const Auth = () => {
           <Divider />
         </Flex>
         <Flex justify={"space-evenly"} align="center" w={"100%"}>
-          <Button variant={"social"} gap="1">
-            <Icon as={AiOutlineGoogle} color="Main" boxSize={4} />
+          <Button
+            variant={"social"}
+            leftIcon={<Icon as={AiOutlineGoogle} color="Main" boxSize={4} />}
+          >
             Google
           </Button>
-          <Button variant={"social"} gap="1">
-            <Icon as={GrFacebookOption} color="Main" boxSize={4} />
+          <Button
+            variant={"social"}
+            leftIcon={<Icon as={GrFacebookOption} color="Main" boxSize={4} />}
+          >
             Facebook
           </Button>
         </Flex>
@@ -79,11 +84,11 @@ const Auth = () => {
             whiteSpace={"nowrap"}
             opacity="0.4"
           >
-            OR
+            {isSignUp ? "OR" : "Or login with email"}
           </Text>
           <Divider />
         </Flex>
-        <AuthForm isSignup={isSignUp} />
+        {isSignUp ? <Signup /> : <Login />}
         {isSignUp ? (
           <Text opacity={1}>
             Already have an account?{" "}

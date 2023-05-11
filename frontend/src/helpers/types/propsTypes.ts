@@ -18,9 +18,6 @@ export type BlogCardProps = {
     body: string;
   };
 };
-export type AuthFormProps = {
-  isSignup: boolean;
-};
 export type WalletCardProps = {
   name: string;
 };

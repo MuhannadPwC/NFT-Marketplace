@@ -22,6 +22,7 @@ import NftDetails from "./pages/market/NftDetails";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/user/Auth";
 import ConnectWallet from "./pages/user/ConnectWallet";
+import ResetPassword from "./pages/user/ResetPassword";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +32,10 @@ const router = createBrowserRouter(
         <Route index element={<MarketPlace />} />
         <Route path=":id" element={<NftDetails />} />
       </Route>
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/auth">
+        <Route index element={<Auth />} />
+        <Route path="reset-password" element={<ResetPassword />} />
+      </Route>
       <Route path="/wallet" element={<ConnectWallet />} />
       <Route path="/blogs" element={<BlogLayout />}>
         <Route index element={<BlogsList />} />
