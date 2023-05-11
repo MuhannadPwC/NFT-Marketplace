@@ -7,13 +7,8 @@ import { NavLink as RouterLink } from "react-router-dom";
 import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const Footer = () => {
-
   return (
-    <Box
-      padding="60px 0px 120px 0px"
-      bg={"Dark"}
-      color="white"
-    >
+    <Box padding="60px 0px 120px 0px" bg={"Dark"} color="white">
       <Subscribe />
       <Flex justify={"space-between"} mt="50px" ml={"175px"} mr="120px">
         <Brand />
@@ -43,7 +38,6 @@ const Footer = () => {
             to="/policy"
             fontSize={"xs"}
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             <b>Privacy Policy</b>
           </Link>
@@ -52,7 +46,6 @@ const Footer = () => {
             to="/terms"
             fontSize={"xs"}
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             <b>Term of Service</b>
           </Link>

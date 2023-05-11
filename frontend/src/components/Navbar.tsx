@@ -15,7 +15,6 @@ import { NavLink } from "react-router-dom";
 import { MoonIcon, Search2Icon, SunIcon } from "@chakra-ui/icons";
 import AuthPopover from "./popovers/AuthPopover";
 import CommunityPopover from "./popovers/CommunityPopover";
-import { backToTop } from "../helpers/functions/helperFunctions";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -38,7 +37,6 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"30px"} align="center">
         <Link
-          onClick={backToTop}
           as={NavLink}
           to="/"
           fontSize={"sm"}
@@ -48,7 +46,6 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          onClick={backToTop}
           as={NavLink}
           to="/market"
           fontSize={"sm"}
@@ -59,7 +56,6 @@ const Navbar = () => {
         </Link>
         <CommunityPopover />
         <Link
-          onClick={backToTop}
           as={NavLink}
           to="/activity"
           fontSize={"sm"}
@@ -69,7 +65,6 @@ const Navbar = () => {
           Activity
         </Link>
         <Link
-          onClick={backToTop}
           as={NavLink}
           to="/blogs"
           fontSize={"sm"}
@@ -96,7 +91,14 @@ const Navbar = () => {
       </Flex>
       <Flex gap={"20px"} align="center">
         <AuthPopover />
-        <Button as={NavLink} to="/wallet" size={"md"} fontSize="xs" h={"10"} w="32">
+        <Button
+          as={NavLink}
+          to="/wallet"
+          size={"md"}
+          fontSize="xs"
+          h={"10"}
+          w="32"
+        >
           Connect Wallet
         </Button>
       </Flex>

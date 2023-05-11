@@ -1,6 +1,5 @@
 import { Flex, Heading, Link, VStack } from "@chakra-ui/react";
 import { NavLink as RouterLink, Route } from "react-router-dom";
-import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const UsefulLinks = () => {
   return (
@@ -17,7 +16,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Guideline
           </Link>
@@ -35,7 +33,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             About
           </Link>
@@ -45,7 +42,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             FAQ
           </Link>
@@ -55,7 +51,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Marketplace
           </Link>
@@ -65,7 +60,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Blog
           </Link>
@@ -80,7 +74,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Art
           </Link>
@@ -90,7 +83,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Collection
           </Link>
@@ -100,7 +92,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Creator / Owner
           </Link>
@@ -110,7 +101,6 @@ const UsefulLinks = () => {
             fontSize={"xs"}
             opacity="60%"
             _hover={{ textDecor: "none" }}
-            onClick={backToTop}
           >
             Contact Us
           </Link>

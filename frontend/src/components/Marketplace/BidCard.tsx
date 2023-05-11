@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import img from "../../assets/image3.png";
-import { backToTop } from "../../helpers/functions/helperFunctions";
 
 const BidCard = () => {
   return (
@@ -34,13 +33,13 @@ const BidCard = () => {
               <Text fontSize={"2xs"}>8 hours ago</Text>
               <Text opacity={1} fontSize={"2xs"}>
                 From:
-                <Link as={NavLink} to="" color={"Main"} onClick={backToTop}>
+                <Link as={NavLink} to="" color={"Main"}>
                   @{/* TODO: ADD Username and ADD LINK */}Darius
                 </Link>
               </Text>
               <Text opacity={1} fontSize={"2xs"}>
                 To:{" "}
-                <Link as={NavLink} to="" color={"Main"} onClick={backToTop}>
+                <Link as={NavLink} to="" color={"Main"}>
                   @{/* TODO: ADD Username and Link */}tsht20
                 </Link>
               </Text>

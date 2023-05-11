@@ -40,7 +40,6 @@ const NftScroller = () => {
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
-          <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
         </GridItem>
         <GridItem h={"100%"} overflow={"scroll"} pt={"5"}>
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
