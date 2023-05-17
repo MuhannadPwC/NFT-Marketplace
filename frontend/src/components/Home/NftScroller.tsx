@@ -13,37 +13,6 @@ import image from "../../assets/image.png";
 
 const NftScroller = () => {
   const { colorMode } = useColorMode();
-  const firstColumn = useRef(null);
-  const secondColumn = useRef(null);
-  const lastColumn = useRef(null);
-  let index = true;
-
-  setInterval(() => {
-    firstColumn.current.scroll({
-      top: index ? 9000 : 0,
-      left: 0,
-      behavior: "smooth",
-    });
-    index = !index;
-  }, 3000);
-
-  setInterval(() => {
-    secondColumn.current.scroll({
-      top: index ? 9000 : 0,
-      left: 0,
-      behavior: "smooth",
-    });
-    index = !index;
-  }, 3000);
-
-  setInterval(() => {
-    lastColumn.current.scroll({
-      top: index ? 9000 : 0,
-      left: 0,
-      behavior: "smooth",
-    });
-    index = !index;
-  }, 3000);
   
   return (
     <Box
@@ -56,7 +25,7 @@ const NftScroller = () => {
       }
     >
       <Grid h={"100%"} templateColumns="repeat(3, 1fr)" gap={4}>
-        <GridItem h={"100%"} overflow={"scroll"} ref={firstColumn}>
+        <GridItem h={"100%"} overflow={"scroll"}>
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
@@ -65,7 +34,7 @@ const NftScroller = () => {
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
         </GridItem>
-        <GridItem h={"100%"} overflow={"scroll"} pt={"10"} ref={secondColumn}>
+        <GridItem h={"100%"} overflow={"scroll"} pt={"10"}>
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
@@ -74,7 +43,7 @@ const NftScroller = () => {
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
         </GridItem>
-        <GridItem h={"100%"} overflow={"scroll"} pt={"5"} ref={lastColumn}>
+        <GridItem h={"100%"} overflow={"scroll"} pt={"5"}>
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
           <Image src={image} h={"250px"} mb={4} borderRadius="3xl" />
